@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Container } from 'react-bootstrap';
 import logo from './logo.svg';
 import './App.css';
 import { any } from 'prop-types';
@@ -21,7 +22,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <Container fluid className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -36,7 +37,7 @@ export default class App extends Component {
             Learn React
           </a>
         </header>
-      </div>
+      </Container>
     );
-}
+  }
 }
