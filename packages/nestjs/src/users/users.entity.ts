@@ -11,7 +11,6 @@ import * as bcrypt from 'bcryptjs';
 
 @Entity()
 export class User extends BaseEntity {
-
   @PrimaryGeneratedColumn()
   id: number;
 
