@@ -6,8 +6,13 @@
   text-align: center;
 }
 
+.login-form {
+  color: white;
+  font-size: 14px;
+}
+
 .App-logo {
-  height: 20vmin;
+  height: 15vmin;
   pointer-events: none;
 }
 
