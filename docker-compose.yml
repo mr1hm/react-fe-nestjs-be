@@ -2,6 +2,7 @@ version: "3.5"
 
 services:
   nestjs:
+    container_name: nest-backend
     build:
       context: ./packages/nestjs
       dockerfile: Dockerfile.dev
@@ -14,6 +15,7 @@ services:
       - /app/node_modules
 
   react_app:
+    container_name: react-frontend
     build:
       context: ./packages/react-app
       dockerfile: Dockerfile.dev
@@ -26,6 +28,7 @@ services:
       - /app/node_modules
 
   postgres:
+    container_name: postgres
     image: postgres:13.1
     environment:
       POSTGRES_PASSWORD: example
