@@ -62,6 +62,16 @@ export default class WelcomeLogin extends Component<Props, State> {
             </Form>
           </header>
         </Col>
+        <Col xs="2">
+          <a
+            className="App-link vertical-center-element mb-3"
+            href="http://localhost:3001/createUser"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            sign up
+          </a>
+        </Col>
         <Col className="" xs="2">
           <a
             className="App-link vertical-center-element mb-3"
