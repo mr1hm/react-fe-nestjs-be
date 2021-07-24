@@ -1,7 +1,6 @@
 import { Component } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import WelcomeLogin from './components/welcomeLogin';
-import logo from './logo.svg';
 import './App.css';
 
 export default class App extends Component {
