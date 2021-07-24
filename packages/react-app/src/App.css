@@ -9,10 +9,13 @@
 .login-form {
   color: white;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App-logo {
-  height: 15vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -24,7 +27,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 100vmin;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,4 +47,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/************************************************/
+/*              TEMPLATE CLASSES                */
+/************************************************/
+.vertical-center-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: white;
+}
+
+.form-control {
+  width: 100% !important;
+}
+
+
+/************************************************/
+/*                   Buttons                    */
+/************************************************/
+.login-submit {
+  font-size: 14px;
+}
+
+.login-submit:hover {
+  background-color: #282c34;
+  color: white;
 }
