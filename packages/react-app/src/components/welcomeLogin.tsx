@@ -7,7 +7,7 @@ interface Props {
 }
 
 interface State {
-  username: string,
+  email: string,
   password: string
 }
 
@@ -15,7 +15,7 @@ export default class WelcomeLogin extends Component<Props, State> {
   constructor(props: any) {
     super(props);
     this.state = {
-      username: '',
+      email: '',
       password: ''
     }
     this.handleChange = this.handleChange.bind(this)
@@ -25,22 +25,14 @@ export default class WelcomeLogin extends Component<Props, State> {
 
   }
 
-  getUsername = (e: Event) => {
-
-  }
-
-  handleChange = (event: MouseEvent): void => {
-    event.preventDefault();
-    let username = '', password = '';
-
-    alert(event)
-
-
-    this.setState({ username, password })
+  handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const target = e.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name as any;
+    this.setState({ ...this.state, [name]: value })
   }
 
   render() {
-    const { username, password } = this.state;
     return (
       <Row className="App-header">
         <Col xs="12">
@@ -51,12 +43,12 @@ export default class WelcomeLogin extends Component<Props, State> {
               <br />
               Please login to continue.
             </p>
-            <Form className="login-form" onSubmit={() => this.props.getUser(username, password)}>
+            <Form className="login-form">
               <Form.Group className="mb-3 w-25">
-                <Form.Control onChange={() => this.handleChange} name="username" type="email" placeholder="Email" />
+                <Form.Control onChange={this.handleChange} name="email" type="email" placeholder="Email" value={this.state.email} />
               </Form.Group>
               <Form.Group className="mb-3 w-25">
-                <Form.Control name="password" type="password" placeholder="Password"></Form.Control>
+                <Form.Control onChange={this.handleChange} name="password" type="password" placeholder="Password" value={this.state.password}></Form.Control>
               </Form.Group>
               <Form.Group>
                 <Form.Check type="checkbox" label="Remember Me"></Form.Check>
